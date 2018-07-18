@@ -1,6 +1,5 @@
-# vue-npm2
-
-> A Vue.js project
+# Student Dummy Data using Vue
+> A Vue.js project (Router & Custom Component)
 
 ## Build Setup
 
