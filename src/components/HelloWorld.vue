@@ -1,17 +1,20 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-  </div>
+  <HeaderTitle title="Hello There!" description="Lorem ipsum description"></HeaderTitle>
 </template>
 
 <script>
 /* eslint-disable */
+
+import HeaderTitle from './layouts/HeaderTitle'
+
 export default {
   name: 'HelloWorld',
-  data () {
+  components: {
+    HeaderTitle
+  },
+  data: function () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      
     }
   }
 }

@@ -1,17 +1,18 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Vue Profile</h2>
-  </div>
+  <HeaderTitle title="Vue Profile!" description="Describe yourself"></HeaderTitle>
 </template>
 
 <script>
 /* eslint-disable */
+import HeaderTitle from './layouts/HeaderTitle'
+
 export default {
   name: 'Profile',
+  components: {
+    HeaderTitle
+  },
   data () {
     return {
-      msg: 'Hello This is Profile'
     }
   }
 }

@@ -1,16 +1,7 @@
 <template>
     <ul class="nav flex-column">
-        <li
-        class="nav-item"
-        v-for="nav in navs"
-        :key="nav.id"
-        >
-            <a
-            class="nav-link"
-            :href="nav.link"
-            >
-                {{ nav.name }}
-            </a>
+        <li class="nav-item" v-for="nav in navs" :key="nav.id">
+            <a class="nav-link" :href="nav.link"> {{ nav.name }} </a>
         </li>
     </ul>
 </template>
@@ -34,8 +25,8 @@ export default {
             },
             {
                 id: 'data',
-                name: 'Table Data',
-                link: './#/tabledata'
+                name: 'Student Data',
+                link: './#/student'
             },
             {
                 id: 'chart',

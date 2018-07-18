@@ -1,10 +1,9 @@
 <template>
   <div class="content">
-    <h1>Table Data on Vue
-        <small v-if="isShow.loading"><br>Loading ...</small>
-    </h1>
+      <HeaderTitle title="Vue Table Data" description="Lorem ipsum description"></HeaderTitle>
 
     <!-- TableData -->
+    <h3 align="center" class="tableLoading" v-if="! isShow.tableData">Loading ...</h3>
     <table class="table table-responsive table-hover" v-if="isShow.tableData">
         <thead>
             <th>#</th>
@@ -36,11 +35,13 @@
 /* eslint-disable */
 import axios from 'axios'
 import TableDetail from '@/components/TableDetail'
+import HeaderTitle from './layouts/HeaderTitle'
 
 export default {
     name: 'TableData',
     components: {
-        TableDetail
+        TableDetail,
+        HeaderTitle
     },
     data: function () {
         return {
@@ -85,3 +86,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .tableLoading {
+        margin: 30px 0;
+    }
+</style>
