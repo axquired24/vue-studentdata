@@ -1,6 +1,8 @@
 # Student Dummy Data using Vue
 > A Vue.js project (Router & Custom Component)
 
+![Preview](https://github.com/axquired24/vue-studentdata/blob/master/preview.png)
+
 ## Build Setup
 
 ``` bash
