@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>{{ title }} <br>
+    <h1>
+      <a v-if="withBackBtn" href="javascript:history.back()"><i class="fa fa-chevron-left"></i></a>
+      {{ title }} <br>
       <!-- check if any description value -->
       <small v-if="description">{{ description }}</small>
     </h1>
@@ -11,7 +13,17 @@
 /* eslint-disable */
 export default {
   name: 'HeaderTitle',
-  props: ['title', 'description'],
+  props: {
+    title: {
+      type: String,
+      required: true
+      // default: "Nomnom"
+    },
+    description: {
+      type: String
+    },
+    withBackBtn: Boolean
+  },
   data: function () {
     return {
     }

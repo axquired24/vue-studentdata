@@ -18,9 +18,13 @@
 
 <script>
 /* eslint-disable */
+import DetailBase from './DetailBase'
 
 export default {
     name: 'TableBase',
+    components: {
+        DetailBase
+    },
     props: [
         'isLoading',
         'vheads', // array of table header for each column :: ['no', 'name', 'etc']
@@ -30,6 +34,11 @@ export default {
     data: function () {
         return {
         }
+    },
+    methods: {
+        // showAlert: function(msg) {
+        //     alert(msg);
+        // }
     }
 }
 </script>

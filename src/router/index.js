@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Profile from '@/components/Profile'
 import StudentTable from '@/components/StudentTable'
+import StudentDetail from '@/components/StudentDetail'
 import OldTable from '@/components/TableDataBak'
 
 Vue.use(Router)
@@ -25,10 +26,15 @@ const router = new Router({
       component: StudentTable
     },
     {
-      path: '/tbold',
-      name: 'Table Data Old',
-      component: OldTable
+      path: '/student-dt',
+      name: 'Student Detail',
+      component: StudentDetail
     }
+    // {
+    //   path: '/tbold',
+    //   name: 'Table Data Old',
+    //   component: OldTable
+    // }
   ]
 })
 

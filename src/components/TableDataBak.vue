@@ -1,6 +1,7 @@
 <template>
   <div class="content">
       <HeaderTitle title="Vue Table Data" description="Lorem ipsum description"></HeaderTitle>
+      <DetailBase label="Nama" key="name" value="Albert Septiawan"></DetailBase>
 
     <!-- TableData -->
     <h3 align="center" class="tableLoading" v-if="! isShow.tableData">Loading ...</h3>
@@ -36,11 +37,13 @@
 import axios from 'axios'
 import TableDetail from '@/components/TableDetail'
 import HeaderTitle from './layouts/HeaderTitle'
+import DetailBase from './base/DetailBase'
 
 export default {
     name: 'TableData',
     components: {
         TableDetail,
+        DetailBase,
         HeaderTitle
     },
     data: function () {

@@ -22,7 +22,8 @@ export default {
     },
     data: function () {
         return {
-            dataUrl: 'https://my.api.mockaroo.com/vue-dummy.json',
+            // dataUrl: 'https://my.api.mockaroo.com/vue-dummy.json',
+            dataUrl: "https://api.myjson.com/bins/8vm42",
             isLoading: true,
             table: {
                 heads: ['Name', 'City', 'Email'],
@@ -30,21 +31,18 @@ export default {
             }
         }
     },
-    created() {
+    mounted() {
         this.loadTable();
     },
     methods: {
         loadTable: function () {
             const vm = this;
             this.setTableLoading();
-            axios.get(this.dataUrl, {
-                headers: {
-                    'X-API-Key': '6c398fb0'
-                }
-            }).then(response => {
+            axios.get(this.dataUrl)
+            .then(response => {
                 const studentRows = response.data;
                 vm.table.rows = _.map(studentRows, function(m) {
-                    let name = "<a href='#/"+m.id+"'>"+m.name+"</a>"
+                    let name = "<a href='#/student-dt?id="+m.id+"'>"+m.name+"</a>"
                     return [name, m.city, m.email]
                 });
                 vm.setTableVisible();
