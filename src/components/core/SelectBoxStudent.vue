@@ -1,7 +1,9 @@
 <template>
   <div>
       <span v-if="isLoading">Loading...</span>
-      <SelectBoxBase v-if="! isLoading" :model="model" :opt="opt"></SelectBoxBase>
+      <select v-if="! isLoading" v-model="model">
+        <option v-for="o in opt" :value="o" :key="o.val">{{ o.label }}</option>
+    </select>
   </div>
 </template>
 
@@ -9,7 +11,6 @@
 /* eslint-disable */
 import axios from 'axios'
 import lodash from 'lodash'
-import SelectBoxBase from '../base/SelectBoxBase'
 
 const baseUrl = "https://api.myjson.com/bins/8vm42";
 
@@ -22,7 +23,6 @@ export default {
       }
   },
   components: {
-    SelectBoxBase
   },
   data () {
     return {
